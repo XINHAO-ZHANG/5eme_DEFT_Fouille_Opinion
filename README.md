@@ -2,7 +2,7 @@
 
 ## Tâche 3 Détermination du parti politique auquel appartient l’orateur
 Dans le cadre du cours apprentissage automatique au semestre 1 (M2 TAL 2023-2024)
-> Yingzi LIU, Xinhao ZHANG, Cui Xiaohua
+> Yingzi LIU, Xinhao ZHANG, Xiaohua Cui
 
 ### Présentation du Corpus:
 Le corpus se limite aux cinq partis les plus représentés en termes de nombre d’interventions, soit : 3 346 interventions
