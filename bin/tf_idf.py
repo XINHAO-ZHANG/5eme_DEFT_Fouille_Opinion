@@ -20,7 +20,7 @@ def tfidfVectorize(CSV_train, CSV_test):
     X_test = vectorizer.transform(test_df['texte'])
 
     # récupérer les labels correspondants
-    y_train = train_df['label']
-    y_test = test_df['label']
+    y_train = train_df['parti']
+    y_test = test_df['parti']
 
     return X_train, X_test, y_train, y_test
