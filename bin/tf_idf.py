@@ -11,10 +11,6 @@ def tfidfVectorize(CSV_train, CSV_test):
     train_df = pd.read_csv(CSV_train)
     test_df = pd.read_csv(CSV_test)
 
-    # remplacer les valeurs manquantes par des chaînes vides
-    train_df['texte'].fillna('', inplace=True)
-    test_df['texte'].fillna('', inplace=True)
-
     # initialiser le vectorizer avec les paramètres désirés
     vectorizer = TfidfVectorizer(
         ngram_range=(1, 3),
