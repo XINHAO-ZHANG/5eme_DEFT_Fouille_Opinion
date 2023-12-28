@@ -10,13 +10,16 @@ def tfidfVectorize(CSV_train, CSV_test):
     '''
     train_df = pd.read_csv(CSV_train)
     test_df = pd.read_csv(CSV_test)
+    train_df.dropna(subset=['texte'], inplace=True)
+    test_df.dropna(subset=['texte'], inplace=True)
+
 
     # initialiser le vectorizer avec les paramètres désirés
     vectorizer = TfidfVectorizer(
         ngram_range=(1, 3),
         max_df=0.5,
         use_idf=True,
-        sublinear_tf=True
+        sublinear_tf=True,
         max_features=10000
     )
 

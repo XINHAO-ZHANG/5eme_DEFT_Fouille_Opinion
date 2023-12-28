@@ -6,13 +6,12 @@ import pandas as pd
 
 def extract_data_brut(file_path,output_csv_path):
     '''
-    extraire les textes et leurs parits à partir des corpus d'apprentissage bruts
+    extraire les textes et leurs parities à partir des corpus d'apprentissage bruts
     et les conserver dans un fichier csv pour chaque langue
     '''
     
     tree = ET.parse(file_path)
     root = tree.getroot()
-
     data = []
     for doc in root.findall('.//doc'):
         # obtenir tous les paragraphes du texte et les joindre en un seul
