@@ -6,7 +6,6 @@ import re
 import string
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 # installer les packages nltk nécessaires pour la préparation des données 
