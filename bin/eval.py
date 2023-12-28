@@ -48,7 +48,9 @@ def plot_confusion_matrix(y_test,y_pred, model):
     plt.xlabel('Parti Prédit')
     plt.ylabel('Parti Réel')
     plt.title('Matrice de Confusion')
-    plt.show()
 
     # sauvegarder la figure dans le dossier result
     plt.savefig(f'../result/Confusion_Matrix_{model}.png', format='png', dpi=300)
+    
+    plt.show()
+
