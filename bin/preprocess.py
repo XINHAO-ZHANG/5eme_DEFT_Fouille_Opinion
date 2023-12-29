@@ -23,7 +23,7 @@ def preprocess_text(text, lang):
     '''
     # assurer que le texte est de type str
     if not isinstance(text, str):
-        return str(text)  # convertir en str
+        text = str(text)  # convertir en str
 
     # charger les stopwords selon la langue
     if lang == 'en':
