@@ -16,7 +16,7 @@ def tfidfVectorize(CSV_train, CSV_test):
         ngram_range=(1, 3),
         max_df=0.5,
         use_idf=True,
-        sublinear_tf=True
+        sublinear_tf=True,
         max_features=10000
     )
 
