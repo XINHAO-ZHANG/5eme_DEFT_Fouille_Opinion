@@ -1,16 +1,59 @@
-# La cinquième édition du défi fouille de textes (DEFT) - Fouille d'Opinion
+# Détermination du Parti Politique des Parlementaires Européens 🇪🇺
 
-## Tâche 3 Détermination du parti politique auquel appartient l’orateur
-Dans le cadre du cours apprentissage automatique au semestre 1 (M2 TAL 2023-2024)
-> Yingzi LIU, Xinhao ZHANG, Xiaohua Cui
+Ce projet de recherche implémente une classification de texte pour identifier l'affiliation politique des parlementaires européens à partir de leurs discours, en se focalisant sur le corpus en français. Différents classificateurs ont été appliqués et évalués pour déterminer le plus performant.
 
-### Présentation du Corpus:
-Le corpus se limite aux cinq partis les plus représentés en termes de nombre d’interventions, soit : 3 346 interventions
-attribuées au groupe ELDR, 4 482 au GUE/NGL, 11 429 au PPE-DE, 9 066 au PSE et 3 961 aux Verts/ALE. Le
-parti politique d’appartenance de chaque parlementaire renseigné sur le site Internet du Parlement européen nous
-a permis de constituer les données de référence de la troisième tâche, en associant à chaque intervention le parti
-politique de son orateur.
 
-### Approches à Appliquer:
-TF-IDF ; Classfieur Automatique ; Regression Logique ; Validation Croisée
 
+## 📚 Traitement du corpus
+
+Le corpus comprend des discours du Parlement européen en français. Les données ont été extraites de fichiers XML, normalisées, et traitées pour la classification. Le prétraitement comprend la normalisation de la casse, la suppression des mots vides, des caractères spéciaux et des chiffres.
+
+
+
+
+
+## 💡 Feature Engineering
+
+#### TF-IDF (Term Frequency-Inverse Document Frequency)
+
+- **Processus :** Utilisation de TF-IDF pour convertir les discours en vecteurs, en tenant compte de la fréquence des mots tout en équilibrant leur importance à travers différents documents.
+- **Configuration :** Paramètre `max_df` réglé à 0.6 pour filtrer les mots qui apparaissent fréquemment, améliorant ainsi la distinction entre les catégories.
+
+### 
+
+## 🚀 Méthodologies
+
+Plusieurs modèles de classification ont été explorés :
+
+### 1. Classificateurs Linéaires
+
+#### Régression Logistique
+
+- **Application :** Testé avec et sans rééquilibrage des classes. Amélioration notable de la performance avec rééquilibrage.
+
+#### Multinomial Naive Bayes
+
+- **Particularités :** Paramètre d'apprentissage ajusté pour gérer les déséquilibres de catégories.
+
+### 2. Méthodes Ensemblistes
+
+#### Random Forest
+
+#### Gradient Boosting Decision Tree (GBDT)
+
+- **XGBoost**
+- **LightGBM**
+
+
+
+## 📊Résultats et évaluation
+
+Des expérimentations ont été menées pour chaque modèle, et les performances ont été évaluées en termes de précision, rappel, score F1, et support. Le projet a mis en lumière des différences significatives dans les performances des divers classificateurs.
+
+
+
+## 👥 Auteurs
+
+- Xinhao Zhang
+- Yingzi Liu
+- Xiaohua Cui
